@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #f4f4f4;
+
+        }
+        button{
+            padding: 10px;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+            border-radius: 10x;
+            box-shadow: black 15px 20px 20px;
+          
+            color: aqua;
+           cursor: pointer;
+           font-size: 17px;
+          margin-left: 60px;
+        }
+           button:hover{
+            background-color: #f4f4f4;
+            color: seagreen;
+           }
+        
+        .landing{
+            height: 250px;
+            width: 400px;
+            background-color: dodgerblue;
+            padding: 30px;
+            margin-top: 120px;
+            border-radius: 20px 100px 50px 100px;
+            border-style: outset;
+              box-shadow: skyblue 20px 20px 20px 20px;
+        }
+        h1{
+            font-style: italic;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 40px;
+            color: white;
+            } 
+            .img{
+                background-size: contain;
+            } 
+            .btn{
+                display: flex;
+                gap: 2px;
+                margin-top: 40px;            }
+            .ab{
+                width: 110px;
+                 }
+            a{
+                margin-left: 300px;
+            }
+</style>
+</head>
+<body class="img" style="background-image: url(ysu.png);">
+    <div class="landing">
+        <h1>WELCOME TO GANIE</h1>
+        <P>Your trusted result prediction system. Ready to see your future results?</P>
+
+        <div class="btn">
+            <div class="act">
+        <button onclick="proceed()">enter ganie</button>
+           </div>
+           <div class="act">
+        <button class="ab" id="display" onclick="proceeds()">About</button>
+          </div>
+    </div>
+    </div>
+    <script>
+        /*window.onload = function (){
+            if(localStorage.getItem('visitedaboutGanie')){
+                document.getElementById('display').style.display = "none";            
+            }
+        }*/
+        window.onload = function (){
+            if(sessionStorage.getItem('visitedaboutGanie')){
+                document.getElementById('display').style.display = "none";            
+            }
+        }
+        function proceed(){
+            window.location.href="scale.html";
+        }
+        function proceeds(){
+       sessionStorage.setItem('visitedaboutGanie', true);
+            window.location.href="aboutGanie.html";
+        }
+    </script>
+</body>
+</html>
+
+
+
